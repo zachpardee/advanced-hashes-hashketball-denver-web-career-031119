@@ -196,16 +196,11 @@ def player_numbers(team)
       if team_data[:team_name] == (team)
         team_data.each do |attribute, data|
           game_hash[location][:players].each do |player|
-
             output << player[1][:number].to_i
           end
         end
-
       end
-
     end
-
-
   output.uniq
 end
 
@@ -225,8 +220,6 @@ def big_shoe_rebounds
   biggest_shoe =  0
   biggest_name = " "
   biggest_location = ""
-
-
   game_hash.each do |location, team_data|
     location = location
     game_hash[location][:players].each do |player, stats|
@@ -239,5 +232,4 @@ def big_shoe_rebounds
   end
 
 return game_hash[biggest_location][:players][biggest_name][:rebounds]
-
 end
